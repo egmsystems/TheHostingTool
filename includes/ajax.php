@@ -153,6 +153,11 @@ class Ajax {
 
     public function addresscheck() {
         global $main;
+/*
+todo:
+1. Show in information.png this preg_match
+2. add at (.) to abreviate address
+*/
         if(!preg_match("/^([0-9a-zA-Z\.\ \-])+$/", $main->getvar['address'])) {
             $_SESSION['check']['address'] = false;
             echo 0;
